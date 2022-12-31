@@ -24,7 +24,7 @@ const PackageDetails = () => {
         <Container>
           <Row>
             <Col lg="6">
-              <img src={singleCarItem.imgUrl} alt="" className="w-100" />
+              <img src={singleCarItem.imgUrl} alt="" className="w-100 h-100" />
             </Col>
 
             <Col lg="6">
@@ -33,7 +33,7 @@ const PackageDetails = () => {
 
                 <div className=" d-flex align-items-center gap-5 mb-4 mt-3">
                   <h6 className="rent__price fw-bold fs-4">
-                    ₹{singleCarItem.price}.00/- only
+                    ₹{singleCarItem.minPrice}.00/- onwards
                   </h6>
 
                   {/* <span className=" d-flex align-items-center gap-2">
@@ -116,7 +116,12 @@ const PackageDetails = () => {
                     {singleCarItem.brand}
                   </span> */}
                 </div>
+                
               </div>
+              <div className="d-flex flex-column mt-3 mb-3 section__description">
+                {singleCarItem.prices.map((item)=>(<div><b className="text-capitalize">{item.car}:</b>  ₹{item.price}/-</div>))}
+              </div>
+                
             </Col>
 
             <Col lg="12" className="mt-5">

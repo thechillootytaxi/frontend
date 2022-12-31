@@ -22,8 +22,8 @@ const serviceData = [
 
   {
     id: 4,
-    title: "Fast & Easy Booking",
-    icon: "ri-timer-flash-line",
+    title: "Ooty Train Booking",
+    icon: "ri-train-line",
     desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
   },
 
