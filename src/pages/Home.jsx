@@ -16,10 +16,17 @@ import Testimonial from "../components/UI/Testimonial";
 // import BlogList from "../components/UI/BlogList";
 import Contact from "./Contact";
 import "../styles/find-car-form.css"
+import whatsAppIcon from "../assets/all-images/whatsappIcon.png"
 
 const Home = () => {
   return (
     <Helmet title="Home">
+      <div className="whatsApp_icon">
+        <a href="https://wa.me/918148994752" target="_blank" rel="noreferrer">
+          <img src={whatsAppIcon} alt="check your net connection" width='100%'/>
+        </a>
+      </div>
+      
       {/* ============= hero section =========== */}
       <section className="p-0 hero__slider-section">
         <HeroSlider />

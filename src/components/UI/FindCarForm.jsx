@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from 'react-toastify';
 import { useState } from "react";
+import packageData from "../../assets/data/packageData";
 
 const FindCarForm = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -51,7 +52,7 @@ const FindCarForm = () => {
         </FormGroup>
 
         <FormGroup className="select__group">
-          <select {...register("fromCity", { required: true })}>
+          <select {...register("fromCity", { required: false })}>
             <option value='' hidden>Select From City</option>
             {locMasters.map((item, ind)=>(
               <option value={item} key={ind}>{item}</option>
@@ -61,7 +62,7 @@ const FindCarForm = () => {
         </FormGroup>
 
         <FormGroup className="select__group">
-          <select {...register("toCity", { required: true })}>
+          <select {...register("toCity", { required: false })}>
             <option value='' hidden>Select To City</option>
             {locMasters.map((item, ind)=>(
               <option value={item} key={ind}>{item}</option>
@@ -85,15 +86,13 @@ const FindCarForm = () => {
           {errors.journeyTime && <span className="error-text">This field is required</span>}
         </FormGroup>
         <FormGroup className="select__group">
-          <select {...register("luggage", { required: true })}>
-            <option value='' hidden>Select Luggage</option>
-            <option value="1 luggage">1 luggage</option>
-            <option value="2 luggage">2 luggage</option>
-            <option value="3 luggage">3 luggage</option>
-            <option value="4 luggage">4 luggage</option>
-            <option value="5+ luggage">5+ luggage</option>
+          <select {...register("package", { required: false })}>
+            <option value='' hidden>Select Package</option>
+            {packageData.map((item)=>(
+              <option value={item.packageName}>{item.packageName}</option>
+            ))}
           </select>
-          {errors.luggage && <span className="error-text">This field is required</span>}
+          {errors.package && <span className="error-text">This field is required</span>}
         </FormGroup>
         <FormGroup className="select__group">
           <select {...register("count", { required: true })}>

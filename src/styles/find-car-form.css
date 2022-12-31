@@ -83,6 +83,17 @@
   border: none;
   outline: none;
 }
+.whatsApp_icon{
+  position: fixed;
+  z-index: 100;
+  width: 50px;
+  margin-top: 80vh;
+  margin-left: 75vw;
+  display: none;
+}
+.whatsApp_icon img{
+  border-radius: 10px;
+}
 
 @media only screen and (max-width: 992px) {
   .find__cars-left {
@@ -150,6 +161,10 @@
     /* bottom: -250px; */
     /* display: none; */
     position: relative;
+  }
+
+  .whatsApp_icon{
+    display: block;
   }
 }
 .error-text{
