@@ -25,14 +25,14 @@
   background: transparent !important;
 }
 
-.quick__link a {
+.quick__link div {
   color: rgba(255, 255, 255, 0.715);
   text-decoration: none;
   font-weight: 300;
   transition: 0.3s;
 }
 
-.quick__link a:hover {
+.quick__link div:hover {
   color: #f9a826;
 }
 

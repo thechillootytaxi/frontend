@@ -39,17 +39,18 @@ const About = () => {
                 </h2>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                The Chill Ooty Taxi is a taxi service enabling the travelers to book safe, 
+                reliable and comfortable ride. To serve you better, we give 
+                you a wide range of choices between taxis across TamilNadu.
+                We are regularly upgrading our services to offer you comfortable travel
+                with great value for money.
                 </p>
 
                 <p className="section__description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Eveniet veniam assumenda aperiam accusantium ex autem
-                  perferendis repellendus nostrum delectus. Nemo et dolore est
-                  tempore rem minima adipisci magni dolorum ipsam.
+                Whether you have to rush for an urgent meeting
+                or a flight to catch, arrange a pickup for your family returning from a late
+                night party, you can always count on us to get you there safely and on time.
+                We strive to be your most trusted travel partner for always.
                 </p>
 
                 <div className=" d-flex align-items-center gap-3 mt-4">
