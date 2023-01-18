@@ -48,6 +48,7 @@ const Contact = () => {
   const onError = data => console.log(data);
   const [showHeader, setShowHeader] = useState(true);
   const [isLoading, setIsloading] = useState(false);
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
   useEffect(() => {
     if(window.location.pathname==="/home")
     setShowHeader(false)
@@ -58,6 +59,25 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+
+  const setDimension = () => {
+    if(window.innerWidth< 768)
+    setIsMobileScreen(true)
+    else
+    setIsMobileScreen(false)
+  }
+  
+  useEffect(() => {
+    if(window.innerWidth< 768){
+      setIsMobileScreen(true)
+    }
+    window.addEventListener('resize', setDimension);
+    return(() => {
+        window.removeEventListener('resize', setDimension);
+    })
+  }, [])
+
 
   return (
     <Helmet title="Contact">
@@ -119,7 +139,7 @@ const Contact = () => {
 
             <Col lg="5" md="5">
               <div className="contact__info">
-                <h6 className="fw-bold">Contact Information</h6>
+                <h6 className={`fw-bold ${isMobileScreen && 'mt-4'}`}>Contact Information</h6>
                 <p className="section__description mb-0">
                   {businessDetails.address}
                 </p>

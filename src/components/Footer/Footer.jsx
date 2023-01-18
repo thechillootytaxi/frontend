@@ -3,6 +3,7 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../../styles/footer.css";
 import { businessDetails } from "../../assets/data/businessDetails";
+import { useNavigate } from "react-router-dom";
 
 const quickLinks = [
   {
@@ -37,6 +38,15 @@ const quickLinks = [
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
+  const navigate = useNavigate();
+  const handleNavigate = (link) => {
+    console.log(window.location.pathname)
+    if(window.location.pathname===link){
+      window.scrollTo(0, 0);
+      return
+    }
+    navigate(link)
+  }
   return (
     <footer className="footer">
       <Container>
@@ -63,7 +73,9 @@ const Footer = () => {
               <ListGroup>
                 {quickLinks.map((item, index) => (
                   <ListGroupItem key={index} className="p-0 mt-3 quick__link">
-                    <Link to={item.path}>{item.display}</Link>
+                    <div onClick={()=>handleNavigate(item.path)}>
+                      {item.display}
+                    </div>
                   </ListGroupItem>
                 ))}
               </ListGroup>

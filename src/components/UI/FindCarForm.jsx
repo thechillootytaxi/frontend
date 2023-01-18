@@ -36,7 +36,7 @@ const FindCarForm = () => {
       <div className="d-flex align-items-center justify-content-between flex-wrap">
         <FormGroup className="form__group">
           <input type="text" placeholder="Name" {...register("name", { required: true })}/>
-          {errors.name && <span className="error-text">This field is required</span>}
+          {errors.name && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         {/* <FormGroup className="form__group">
@@ -48,7 +48,7 @@ const FindCarForm = () => {
 
         <FormGroup className="form__group">
           <input type="text" placeholder="Phone Number" {...register("phone", { required: true })}/>
-          {errors.phone && <span className="error-text">This field is required</span>}
+          {errors.phone && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         <FormGroup className="select__group">
@@ -58,7 +58,7 @@ const FindCarForm = () => {
               <option value={item} key={ind}>{item}</option>
             ))}
           </select>
-          {errors.fromCity && <span className="error-text">This field is required</span>}
+          {errors.fromCity && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         <FormGroup className="select__group">
@@ -68,12 +68,12 @@ const FindCarForm = () => {
               <option value={item} key={ind}>{item}</option>
             ))}
           </select>
-          {errors.toCity && <span className="error-text">This field is required</span>}
+          {errors.toCity && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         <FormGroup className="form__group">
           <input type="date" placeholder="Journey date" {...register("journeyDate", { required: true })} min={getDate()}/>
-          {errors.journeyDate && <span className="error-text">This field is required</span>}
+          {errors.journeyDate && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         <FormGroup className="form__group">
@@ -83,16 +83,16 @@ const FindCarForm = () => {
             placeholder="Journey time"
             {...register("journeyTime", { required: true })}
           />
-          {errors.journeyTime && <span className="error-text">This field is required</span>}
+          {errors.journeyTime && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
         <FormGroup className="select__group">
           <select {...register("package", { required: false })}>
             <option value='' hidden>Select Package</option>
-            {packageData.map((item)=>(
-              <option value={item.packageName}>{item.packageName}</option>
+            {packageData.map((item, ind)=>(
+              <option key={ind} value={item.packageName}>{item.packageName}</option>
             ))}
           </select>
-          {errors.package && <span className="error-text">This field is required</span>}
+          {errors.package && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
         <FormGroup className="select__group">
           <select {...register("count", { required: true })}>
@@ -103,7 +103,7 @@ const FindCarForm = () => {
             <option value="4 person">4 person</option>
             <option value="5+ person">5+ person</option>
           </select>
-          {errors.count && <span className="error-text">This field is required</span>}
+          {errors.count && <span className="error-text select__group">This field is required</span>}
         </FormGroup>
 
         <FormGroup className="form__group" style={{width:'100%'}}>

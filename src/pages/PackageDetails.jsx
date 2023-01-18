@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 // import BookingForm from "../components/UI/BookingForm";
 // import PaymentMethod from "../components/UI/PaymentMethod";
 import FindCarForm from "../components/UI/FindCarForm";
+import { notes } from "../assets/data/notes";
 
 const PackageDetails = () => {
   const { slug } = useParams();
@@ -119,7 +120,7 @@ const PackageDetails = () => {
                 
               </div>
               <div className="d-flex flex-column mt-3 mb-3 section__description">
-                {singleCarItem.prices.map((item)=>(<div><b className="text-capitalize">{item.car}:</b>  ₹{item.price}/-</div>))}
+                {singleCarItem.prices.map((item, ind)=>(<div key={ind}><b className="text-capitalize">{item.car}:</b>  ₹{item.price}/-</div>))}
               </div>
                 
             </Col>
@@ -128,6 +129,17 @@ const PackageDetails = () => {
               <div className="booking-info mt-5">
                 <h5 className="fw-bold ">Booking Information</h5>
                 <FindCarForm />  
+              </div>
+            </Col>
+
+            <Col lg="12">
+              <div className="booking-info mt-5">
+                <h5 className="fw-bold ">Notes</h5>
+                <div className="section__description">
+                  {notes.map((item, ind)=>(
+                    <p className="mb-0" key={ind}>{ `${ind+1}) ${item}`}</p>
+                  ))}
+                </div>
               </div>
             </Col>
 
