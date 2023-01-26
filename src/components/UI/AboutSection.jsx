@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
-import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
+// import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
+import abtCar from "../../assets/all-images/cars-img/abtCar.png";
 
 const AboutSection = ({ aboutClass }) => {
   return (
@@ -30,21 +31,21 @@ const AboutSection = ({ aboutClass }) => {
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> 15000+ Happy Customers
+                  <i class="ri-checkbox-circle-line"></i> <b>15000+ Happy Customers</b>
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> 1000000+ KMs
+                  <i class="ri-checkbox-circle-line"></i> <b>1000000+ KMs</b>
                 </p>
               </div>
 
               <div className="about__section-item d-flex align-items-center">
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> 50+ Experienced Drivers
+                  <i class="ri-checkbox-circle-line"></i> <b>50+ Experienced Drivers</b>
                 </p>
 
                 <p className="section__description d-flex align-items-center gap-2">
-                  <i class="ri-checkbox-circle-line"></i> 100+ Vehicles
+                  <i class="ri-checkbox-circle-line"></i> <b>100+ Vehicles</b>
                 </p>
               </div>
             </div>
@@ -52,7 +53,7 @@ const AboutSection = ({ aboutClass }) => {
 
           <Col lg="6" md="6">
             <div className="about__img">
-              <img src={aboutImg} alt="" className="w-100" />
+              <img src={abtCar} alt="" className="w-100" />
             </div>
           </Col>
         </Row>

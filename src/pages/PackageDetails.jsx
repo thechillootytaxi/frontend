@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 // import BookingForm from "../components/UI/BookingForm";
 // import PaymentMethod from "../components/UI/PaymentMethod";
 import FindCarForm from "../components/UI/FindCarForm";
-import { notes } from "../assets/data/notes";
 
 const PackageDetails = () => {
   const { slug } = useParams();
@@ -136,7 +135,7 @@ const PackageDetails = () => {
               <div className="booking-info mt-5">
                 <h5 className="fw-bold ">Notes</h5>
                 <div className="section__description">
-                  {notes.map((item, ind)=>(
+                  {singleCarItem.notes.map((item, ind)=>(
                     <p className="mb-0" key={ind}>{ `${ind+1}) ${item}`}</p>
                   ))}
                 </div>

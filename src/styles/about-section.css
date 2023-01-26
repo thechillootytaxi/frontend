@@ -7,6 +7,10 @@
   font-size: 1.1rem;
 }
 
+.section__description b{
+  font-size: 1rem;
+}
+
 @media only screen and (max-width: 992px) {
   .about__section-content h2 {
     font-size: 1.5rem;
@@ -21,6 +25,10 @@
 
   .section__description i {
     font-size: 0.8rem !important;
+  }
+
+  .section__description b{
+    font-size: larger;
   }
 }
 
