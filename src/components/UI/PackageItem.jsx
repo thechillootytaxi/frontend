@@ -33,11 +33,11 @@ const PackageItem = (props) => {
           </div> */}
 
           <button className=" w-50 car__item-btn car__btn-rent">
-            <Link to={`/package/${packageName}`}>Book</Link>
+            <Link to={`/package/${packageName}`}>Details</Link>
           </button>
 
           <button className=" w-50 car__item-btn car__btn-details">
-            <Link to={`/package/${packageName}`}>Details</Link>
+            <Link to={`/package/${packageName}`}>Book</Link>
           </button>
         </div>
       </div>
